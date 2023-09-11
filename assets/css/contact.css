@@ -1,0 +1,135 @@
+@import url(./componentes/form.css);
+@import url(./componentes/button.css);
+
+.contact {
+    background-color: var(--third-light-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contact__menu {
+    gap: 2rem;
+}
+
+.contact__logo {
+    width: 11.5rem;
+    height: 2.625rem;
+}
+
+.contact__list {
+    color: var(--body-text-color);
+    font-family: var(--news-cycle);
+    font-size: 1rem;
+    gap: 1rem;
+}
+
+.contact__link {
+    cursor: pointer;
+}
+
+.contact__link:hover {
+    color: var(--third-dark-color);
+}
+
+.contact__form--div {
+    width: 100%;
+    max-width: 25rem;
+}
+
+.contact__form {
+    gap: 1.5rem;
+}
+
+.contact__form--title {
+    color: var(--third-dark-color);
+    font-family: var(--playfair-display);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.contact__label {
+    font-family: var(--news-cycle);
+    color: var(--input-text-color);
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.contact__input {
+    border-bottom: 2px solid var(--third-color);
+    outline-color: var(--third-dark-color);
+    padding: .75rem 1rem;
+}
+
+.textarea {
+    resize: none;
+    max-height: 5.625rem;
+}
+
+.input__error {
+    margin-bottom: 1rem;
+    font-size: .75rem;
+    color: var(--alert-color);
+}
+
+.contact__button {
+    background-color: var(--third-dark-color);
+    align-self: flex-start;
+}
+
+.contact__button:hover {
+    background-color: var(--third-color);
+}
+
+@media (min-width: 540px) {
+    .contact__container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .contact__menu {
+        gap: 2.5rem;
+    }
+
+    .contact__list {
+        align-items: start;
+        font-size: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact__container {
+        justify-content: space-around;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .contact__menu {
+        flex-direction: row;
+    }
+
+    .contact__logo {
+        width: 16.5rem;
+        height: 3.75rem;
+    }
+
+    .contact__list {
+        gap: 1.25rem;
+    }
+
+    .contact__form--title {
+        font-size: 2rem;
+    }
+}

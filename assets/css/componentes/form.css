@@ -1,0 +1,27 @@
+@import url(./inputs.css);
+
+.form {
+    gap: 1.5rem;
+}
+
+.form__title {
+    color: var(--first-dark-color);
+    font-family: var(--playfair-display);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form__input {
+    background-color: var(--first-light-color);
+    border-bottom: 2px solid var(--first-color);
+    outline-color: var(--first-color);
+    padding: .875rem 1rem;
+}
+
+.form__input:hover,
+.form__input:focus {
+    background-color: transparent;
+}
+

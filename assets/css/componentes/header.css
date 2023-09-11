@@ -1,0 +1,75 @@
+@import url(./footer.css);
+
+.header {
+    justify-content: space-between;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background-color: var(--blanco);
+    box-shadow: var(--shadow);
+}
+
+.header__logo {
+    width: 8.25rem;
+    height: 2rem;
+}
+
+.search__bar {
+    background-color: var(--third-light-color);
+    outline-color: var(--third-color);
+    border-radius: 50%;
+    height: 2.5rem;
+}
+
+.search__bar:hover {
+    background-color: var(--third-color);
+}
+
+.search__input {
+    background: none;
+    color: var(--body-text-color);
+    font-family: var(--news-cycle);
+    outline: none;
+    padding-right: 1rem;
+    width: 7rem;
+}
+
+.search__button {
+    color: var(--body-text-color);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.search__button:hover {
+    background-color: var(--third-color);
+    cursor: pointer;
+}
+
+@media (min-width: 500px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .search__bar {
+        justify-content: space-between;
+        border-radius: 1rem;
+        padding: 0 1rem;
+    }
+    .search__input {
+        display: block;
+    }
+
+    .search__button {
+        width: 10%;
+    }
+}
+@media (min-width: 992px) {
+    .search__bar {
+        width: 20rem;
+    }
+
+    .search__input {
+        width: 90%;
+    }
+}

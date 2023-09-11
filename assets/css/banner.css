@@ -1,0 +1,65 @@
+.banner {
+    color: var(--body-text-color);
+    font-family: var(--playfair-display);
+}
+
+.banner__image {
+    background: url(../img/banner.svg) no-repeat center / cover;
+    height: calc(100vh - 448px);
+}
+
+.banner__box {
+    position: absolute;
+    top: 28%;
+    width: auto;
+    gap: .5rem;
+}
+
+.banner__title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-shadow: 0px 2px 2px var(--first-color);
+}
+
+.banner__subtitle {
+    font-size: .75rem;
+    text-shadow: 0px 2px 2px var(--first-color);
+}
+
+@media (min-width: 500px) {
+    .banner__image {
+        height: calc(100vh - 360px);
+    }
+
+    .banner__box {
+        top: 35%;
+        gap: 1rem;
+    }
+
+    .banner__title {
+        font-size: 2rem;
+    }
+    
+    .banner__subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner__image {
+        height: calc(100vh - 280px);
+    }
+
+    .banner__box {
+        top: 40%;
+        gap: 2rem;
+    }
+
+    .banner__title {
+        font-size: 2.5rem;
+    }
+    
+    .banner__subtitle {
+        font-size: 1.5rem;
+    }
+}

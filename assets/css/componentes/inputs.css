@@ -1,0 +1,18 @@
+.input {
+    font-size: 1rem;
+    font-family: var(--news-cycle);
+    border-radius: 1rem;
+    color: var(--body-text-color);
+}
+
+.input::placeholder {
+    color: var(--input-text-color);
+}
+
+.input__error {
+    display: none;
+    font-size: .75rem;
+    color: var(--alert-color);
+    font-family: var(--news-cycle);
+    margin-top: .5rem;
+}

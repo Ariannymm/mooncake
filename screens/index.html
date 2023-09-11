@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mooncake</title>
+        <link rel="icon" href="../assets/icon/icon_mooncake.png" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link 
+            href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Playfair+Display:wght@400;700&family=Style+Script&display=swap" 
+            rel="stylesheet"
+        >
+        <link rel="stylesheet" href="../assets/css/base/base.css">
+        <link rel="stylesheet" href="../assets/css/index.css">
+        <link rel="stylesheet" href="../assets/css/banner.css">
+        <link rel="stylesheet" href="../assets/css/contact.css">
+    </head>
+    <body>
+        <header class="header flex container">
+            <img class="header__logo" src="../assets/img/logo_mooncake.png" alt="logo">
+            <nav class="flex">
+                <div class="flex">
+                    <form class="search__bar flex" id="searchForm">
+                        <input class="search__input" type="text" placeholder="Buscar" id="searchInput" hidden>
+                        <button type="submit" class="search__button" id="searchBtn"><ion-icon name="search"></ion-icon></button>
+                    </form>
+                </div>
+                <a type="button" href="./login.html" class="btn__header">
+                    <span class="btn__header--text">Iniciar Sesión</span>
+                    <span class="btn__header--icon"><ion-icon name="person"></ion-icon></span>
+                </a>    
+            </nav>
+        </header>
+        <main>
+            <section class="banner">
+                <div class="banner__image"></div>
+                <div class="banner__box container flex flex--column">
+                    <h1 class="banner__title">Promociones del Mes</h1>
+                    <h2 class="banner__subtitle">Productos seleccionados con 30% de descuento</h2>
+                    <a href="#" class="banner_btn primary_button--alt button">Ver más</a>    
+                </div>
+            </section>
+
+            <section class="products__section container">
+                <div class="categories__info flex">
+                    <h1 class="category__type title">Cheescakes</h1>
+                    <a class="categories__link" data-view id="cheesecakes">
+                        <span>Ver Todo </span>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                </div>
+                <section class="categories" data-cheesecakes>
+                </section>
+                
+                <div class="categories__info flex">
+                    <h1 class="category__type title">Cupcakes</h1>
+                    <a class="categories__link" href="#">
+                        <span>Ver Todo </span>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                </div>
+                <section class="categories" data-cupcakes>
+                </section>
+
+                <div class="categories__info flex">
+                    <h1 class="category__type title">Cookies</h1>
+                    <a class="categories__link" href="#">
+                        <span>Ver Todo </span>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                </div>
+                <section class="categories" data-cookies>
+                </section>
+            </section>
+
+            <section class="contact container flex flex--center">
+                <div class="contact__container">
+                    <div class="contact__menu flex flex--column">
+                        <img class="contact__logo" src="../assets/img/logo_mooncake.png" alt="logo">
+                        <div class="contact__list flex flex--column flex--center">
+                            <a href="./menu.html#about" class="contact__link">Quiénes somos</a>
+                            <a href="./menu.html#policy" class="contact__link">Política de privacidad</a>
+                            <a href="./menu.html#stores" class="contact__link">Nuestras Tiendas</a>
+                            <a href="./menu.html#franquicia" class="contact__link">Franquiciado</a>
+                            <a href="./menu.html#publicity" class="contact__link">Anuncie aquí</a>
+                        </div>
+                    </div>
+                    <div class="contact__form--div">
+                        <form class="contact__form flex flex--column">
+                            <h1 class="contact__form--title">Contáctanos</h1>
+                            <div class="input__container flex flex--column">
+                                <label class="contact__label" for="client">Nombre</label>
+                                <input 
+                                name="client"
+                                id="client" 
+                                type="text" 
+                                class="contact__input input"  
+                                required
+                                />
+                                <span class="input__error">Este campo es requerido*</span>
+                            </div>
+                            <div class="input__container flex flex--column">
+                                <label class="contact__label" for="mensaje">Mensaje</label>
+                                <textarea 
+                                    name="mensaje" 
+                                    id="mensaje" 
+                                    cols="30" 
+                                    rows="10"
+                                    class="textarea contact__input input"
+                                    required></textarea>
+                                <span class="input__error">Este campo es requerido*</span>
+                            </div>
+                            <button type="submit" class="contact__button primary_button button">Enviar</button>
+                        </form>        
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer container flex flex--center">
+            <p>&copy; Desarrollado por Arianny Mendoza   2023</p>
+        </footer>
+        <script type="module" src="../controllers/products-controller.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

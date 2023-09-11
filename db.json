@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "name": "Frutos Rojos",
+      "imageUrl": "../assets/img/cheesecake_frutosrojos.png",
+      "category": "Cheesecakes",
+      "price": "3.00",
+      "description": "Crocante base de galleta, suave pastel de queso y cobertura de frutos rojos.",
+      "id": 1
+    },
+    {
+      "name": "Arándanos",
+      "imageUrl": "../assets/img/cheesecake_arandanos.png",
+      "category": "Cheesecakes",
+      "price": "3.00",
+      "description": "Crocante base de galleta y suave pastel de queso y arándanos.",
+      "id": 2
+    },
+    {
+      "name": "Canela",
+      "imageUrl": "../assets/img/cheesecake_canela.png",
+      "category": "Cheesecakes",
+      "price": "3.00",
+      "description": "Crocante base de galleta y suave pastel de queso y canela.",
+      "id": 3
+    },
+    {
+      "name": "Oreo",
+      "imageUrl": "../assets/img/cheesecake_oreo.png",
+      "category": "Cheesecakes",
+      "price": "3.00",
+      "description": "Crocante base de galleta oreo y suave pastel de queso y galletas oreos.",
+      "id": 4
+    },
+    {
+      "name": "Fresas",
+      "imageUrl": "../assets/img/cheesecake_fresa.png",
+      "category": "Cheesecakes",
+      "price": "3.00",
+      "description": "Crocante base de galleta y suave pastel de queso y fresas con cobertura de gelatina de fresa.",
+      "id": 5
+    },
+    {
+      "name": "Chocolate",
+      "imageUrl": "../assets/img/cheesecake_chocolate.png",
+      "category": "Cheesecakes",
+      "price": "3.00",
+      "description": "Crocante base de galleta y suave pastel de queso con chocolate y cobertura de chocolate oscuro.",
+      "id": 6
+    },
+    {
+      "name": "Red Velvet",
+      "imageUrl": "../assets/img/cupcake_redvelvet.png",
+      "category": "Cupcakes",
+      "price": "2.00",
+      "description": "Esponjoso cupcake de chocolate tipo Red Velvet con cobertura de queso crema.",
+      "id": 7
+    },
+    {
+      "name": "Arándanos",
+      "imageUrl": "../assets/img/cupcake_arandanos.png",
+      "category": "Cupcakes",
+      "price": "2.00",
+      "description": "Esponjoso cupcake de vainilla con arándanos cubierto con crema de mantequilla.",
+      "id": 8
+    },
+    {
+      "name": "Limón",
+      "imageUrl": "../assets/img/cupcake_limon.png",
+      "category": "Cupcakes",
+      "price": "2.00",
+      "description": "Esponjoso cupcake de limón cubierto con crema de mantequilla y limón",
+      "id": 9
+    },
+    {
+      "name": "Nueces",
+      "imageUrl": "../assets/img/cupcake_nueces.png",
+      "category": "Cupcakes",
+      "price": "2.00",
+      "description": "Esponjoso cupcake de vainilla con trozos de nueces y cobertura de mantequilla y nueces.",
+      "id": 10
+    },
+    {
+      "name": "Chocolate",
+      "imageUrl": "../assets/img/cupcake_chocolate.png",
+      "category": "Cupcakes",
+      "price": "2.00",
+      "description": "Esponjoso cupcake de chocolate cubierto con crema de chocolate.",
+      "id": 11
+    },
+    {
+      "name": "Vainilla",
+      "imageUrl": "../assets/img/cupcake_vainilla.png",
+      "category": "Cupcakes",
+      "price": "2.00",
+      "description": "Esponjoso cupcake de vainilla cubierto con crema de mantequilla y vainilla.",
+      "id": 12
+    },
+    {
+      "name": "Chips",
+      "imageUrl": "../assets/img/cookies_chips.png",
+      "category": "Cookies",
+      "price": "1.00",
+      "description": "Crocantes y deliciosas galletas de mantequilla con chips de chocolate.",
+      "id": 13
+    },
+    {
+      "name": "Naranja",
+      "imageUrl": "../assets/img/cookies_naranja.png",
+      "category": "Cookies",
+      "price": "1.00",
+      "description": "Crocantes y deliciosas galletas de mantequilla con un toque de naranja.",
+      "id": 14
+    },
+    {
+      "name": "Avena",
+      "imageUrl": "../assets/img/cookies_avena.png",
+      "category": "Cookies",
+      "price": "1.00",
+      "description": "Crocantes y deliciosas galletas de mantequilla con avena y canela.",
+      "id": 15
+    },
+    {
+      "name": "Chocolate",
+      "imageUrl": "../assets/img/cookies_chocolate.jpg",
+      "category": "Cookies",
+      "price": "1.00",
+      "description": "Crocantes y deliciosas galletas de chocolate con trozos de chocolate oscuro.",
+      "id": 16
+    },
+    {
+      "name": "Jengibre",
+      "imageUrl": "../assets/img/cookies_jengibre.png",
+      "category": "Cookies",
+      "price": "1.00",
+      "description": "Crocantes y deliciosas galletas de mantequilla y jengibre.",
+      "id": 17
+    },
+    {
+      "name": "Red Velvet",
+      "imageUrl": "../assets/img/cookies_redvelvet.png",
+      "category": "Cookies",
+      "price": "1.00",
+      "description": "Crocantes y deliciosas galletas sabor red velvet con chips de chocolate blanco.",
+      "id": 18
+    }
+  ]
+}

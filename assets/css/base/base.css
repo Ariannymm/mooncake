@@ -1,0 +1,70 @@
+@import url(./_variables.css);
+@import url(./_reset.css);
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--news-circle);
+    overflow-x: hidden;
+}
+
+.container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.padding--section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.card {
+    width: 100%;
+    max-width: 26rem;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: var(--style-scripts);
+    color: var(--body-text-color);
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1124px) {
+    .container {
+        padding-left: calc((100vw - 945px) / 2);
+        padding-right: calc((100vw - 945px) / 2);
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        margin-top: 4rem;
+        margin-bottom: 4rem;    
+    }
+}

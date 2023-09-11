@@ -1,0 +1,28 @@
+:root {
+    --style-scripts: 'Style Script', cursive;
+    --news-cycle: 'News Cycle', sans-serif;
+    --playfair-display: 'Playfair Display', serif;
+
+    --bg-color: #FEFAF9;
+
+    --first-color: #E8A0BF;
+    --second-color: #BA90C6;
+    --third-color: #AFE2FF;
+    --first-dark-color: #F55A9D;
+    --second-dark-color: #BC4CDC;
+    --third-dark-color: #67C1F4;
+    --first-light-color: #FFF2F7;
+    --second-light-color: #FAE9FF;
+    --third-light-color: #E1F4FF;
+
+    --blanco: #FFFFFF;
+    --alert-color: #FF3E31;
+    --sucess-color: #61FF48;
+
+    --body-text-color: #444444;
+    --input-text-color: #888888;
+
+    --shadow: 0 5px 10px #4d4d4d10;
+    --shadow-button: 0 5px 10px #4A4A4A30;
+    --shadow-button-hover: 0 5px 10px #4A4A4A50;
+}
