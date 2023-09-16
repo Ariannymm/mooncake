@@ -36,22 +36,34 @@
             <section class="about__section container" id="about">
                 <h1 class="title menu__title">Quiénes Somos</h1>
                 <div class="about__section--div flex flex--center flex--column">
-                    <p class="menu__text">Somos una empresa Pastelera Venezolana con más de 5 años de experiencia. Nuestras especialidades van desde Cheesecakes a las más deliciosas galletas con cobertura crocante y relleno suave.</p>
+                    <p class="menu__text">En Mooncake, nos apasiona crear momentos dulces y memorables para nuestros clientes. Con más de 10 años de experiencia en el arte de la repostería, nos enorgullece ofrecer una amplia variedad de deliciosos pasteles, postres y galletas. ¡Ven a Mooncake y déjate seducir por nuestros exquisitos sabores!</p>
                     <img class="about__img" src="../assets/icon/category_cupcakes.png" alt="Imagen">
                 </div>
             </section>
 
             <section class="policy__section container" id="policy">
-                <h1 class="title menu__title">Política de privacidad</h1>
+                <h1 class="title menu__title">Política de Privacidad</h1>
                 <div class="flex flex--center flex--column">
-                    <p class="menu__text">Somos una empresa Pastelera Venezolana con más de 5 años de experiencia. Nuestras especialidades van desde Cheesecakes a las más deliciosas galletas con cobertura crocante y relleno suave.</p>
+                    <div>
+                        <p class="menu__text" id="hidden-text">Valoramos y respetamos tu privacidad. Esta política de privacidad describe cómo recopilamos, utilizamos y protegemos la información que nos proporcionas cuando visitas nuestro sitio web o utilizas nuestros servicios.<br>
+                            <br>
+                            Recopilamos información personal, como tu nombre o dirección de correo electrónico, solo cuando nos la proporcionas voluntariamente al realizar una compra. Utilizamos esta información para procesar tus pedidos, comunicarnos contigo sobre tu compra.<br>
+                            <br>
+                            Utilizamos medidas de seguridad adecuadas para proteger tu información personal contra el acceso no autorizado, la divulgación o la alteración. Además, utilizamos cookies para mejorar tu experiencia y recopilar datos.<br>
+                            <br>
+                            Si deseas acceder, corregir o eliminar la información personal que tenemos sobre ti, o si tienes alguna pregunta o inquietud sobre nuestra política de privacidad, no dudes en contactarnos a través del formulario proporcionado en nuestro sitio web.<br>
+                            <br>
+                            Al proporcionarnos tu información personal, aceptas los términos de esta política de privacidad. Nos reservamos el derecho de actualizar o modificar esta política en cualquier momento, por lo que te recomendamos revisarla periódicamente.<br>
+                            <br>
+                            Gracias por confiar en Mooncake.</p>
+                            <a href="#hidden-text" class="see-more">Ver más <span class="arrow">&#9660;</span></a>                    </div>
                     <img class="policy__img" src="../assets/icon/category_cookies.png" alt="Imagen">
                 </div>
             </section>
 
             <section class="stores__section container flex flex--center flex--column" id="stores">
                 <h1 class="title menu__title">Nuestras Tiendas</h1>
-                <div class="stores__map">
+                <div class="stores__map" id="stores-map">
                 </div>
             </section>
 
@@ -71,7 +83,6 @@
                             <a href="#about" class="contact__link">Quiénes somos</a>
                             <a href="#policy" class="contact__link">Política de privacidad</a>
                             <a href="#stores" class="contact__link">Nuestras Tiendas</a>
-                            <a href="#franquicia" class="contact__link">Franquiciado</a>
                             <a href="#publicity" class="contact__link">Anuncie aquí</a>
                         </div>
                     </div>
@@ -109,7 +120,13 @@
         <footer class="footer container flex flex--center">
             <p>&copy; Desarrollado por Arianny Mendoza   2023</p>
         </footer>
-        <script type="module" src="../controllers/products-controller.js"></script>
+        <script type="module" src="../controllers/menu-controller.js">
+        </script>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API&callback=initMap"
+        async
+        defer
+      ></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>

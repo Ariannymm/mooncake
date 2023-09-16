@@ -1,35 +1,40 @@
 import { productServices } from "../services/products-services.js";
 
-const url = new URL(window.location);
+// Obtener el elemento del título
+const titleElement = document.querySelector("[data-title]");
 
-const category = url.searchParams.get("id");
+// Obtener el elemento del contenedor de productos
+const productsContainer = document.querySelector("[data-category]");
 
-const getTitle = () => {
-    const title = document.querySelector("[data-title]");
+// Obtener la categoría de la URL
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
 
-    if (category === "[data-view]") {
-        title.textContent = "Cheesecakes";
-    };
-    
+// Actualizar el título de la página
+titleElement.textContent = category;
+
+// Obtener los productos de la categoría correspondiente
+let products;
+if (category === "Cheesecakes") {
+  products = productServices.cheesecakesProducts();
+} else if (category === "Cupcakes") {
+  products = productServices.cupcakesProducts();
+} else if (category === "Cookies") {
+  products = productServices.cookiesProducts();
 }
 
-getTitle();
-
-
-
-/*
-const render = async () => {
-    try{
-        const title = document.querySelector("[data-title]");
-        
-        if (products => products.category === "Cheesecakes") {
-            productServices.detailsProduct(category).then( (products) => {
-                title.textContent = products.category;
-            });
-        } if (products => products.category === "Cupcakes") {
-            title.textContent = "Cupcakes"
-        } 
-    }.catch (error) {console.log(error);}
-};
-
-render();*/
+console.log(products);
+// Mostrar los productos en el contenedor
+products.then(data => {
+  data.forEach(product => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("product__card");
+    productElement.innerHTML = `
+      <img class="product__image" src="${product.imageUrl}" alt="${product.name}">
+      <h2 class="product__name">${product.name}</h2>
+      <p class="product__price">${product.price}</p>
+      <a href="../screens/view-product.html?id=${product.id}" class="product__link">Ver producto</a>
+    `;
+    productsContainer.appendChild(productElement);
+  });
+});

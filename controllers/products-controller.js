@@ -54,9 +54,9 @@ const render = async () => {
 render();
 
 // ESCUCHAR VER TODO
-
+/*
 const viewAll = document.querySelector("[data-view]");
 
 viewAll.addEventListener("click", () => {
     window.location.href = "../screens/product-category.html";
-});
+});*/
