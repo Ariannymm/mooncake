@@ -19,18 +19,10 @@
     <body>
         <header class="header flex container">
             <img class="header__logo" src="../assets/img/logo_mooncake.png" alt="logo">
-            <nav class="flex">
-                <div class="flex">
-                    <form class="search__bar flex" action="">
-                        <input class="search__input" type="text" placeholder="Buscar" hidden>
-                        <button class="search__button" href="#"><ion-icon name="search"></ion-icon></button>
-                    </form>
-                </div>
-            </nav>
         </header>
         <main>
             <section class="edit-product container">
-                <section class="card" data-allProducts>
+                <section class="card">
                     <h1 class="edit-product__title">Editar Producto</h1>
                     <form action="#" class="form flex flex--column" data-editForm>
                         <img class="edit-product__image" src="" data-url />
@@ -103,6 +95,7 @@
             <p>Desarrollado por Arianny Mendoza   2023</p>
         </footer>
         <script type="module" src="../controllers/update-product-controller.js"></script>
+        <script type="module" src="../controllers/search-products-controller.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>

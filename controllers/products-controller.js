@@ -1,12 +1,13 @@
 import { productServices } from "../services/products-services.js";
 import { formatPrice } from "../formatterPrices.js";
 
-const newProduct = (name, imageUrl, price, id) => {               
+const newProduct = (name, imageUrl, category, price, id) => {               
     const card = document.createElement("div");
     const content = `
         <div class="product__card">
             <img class="product__image" src="${imageUrl}" alt="image">
-            <h3 class="product__name">${name}</h3>
+            <h3 class="product__name">${category}</h3>
+            <h3 class="product__name">de ${name}</h3>
             <p class="product__price">${formatPrice(price)}</p>
             <a href="../screens/view-product.html?id=${id}" class="product__link">Ver producto</a>
         </div>
@@ -28,7 +29,7 @@ const render = async () => {
             categoryCheesecakes.innerHTML = "";
             productsList.filter(products => products.category === "Cheesecakes").forEach((element) => {
                 categoryCheesecakes.appendChild(
-                    newProduct(element.name, element.imageUrl, element.price, element.id)
+                    newProduct(element.name, element.imageUrl, element.category, element.price, element.id)
                 );
             });
         } 
@@ -36,14 +37,14 @@ const render = async () => {
                 categoryCupcakes.innerHTML = "";
                 productsList.filter(products => products.category === "Cupcakes").forEach((element) => {
                     categoryCupcakes.appendChild(
-                        newProduct(element.name, element.imageUrl, element.price, element.id)
+                        newProduct(element.name, element.imageUrl, element.category, element.price, element.id)
                     );
                 });
         } if (categoryCookies) {
             categoryCookies.innerHTML = "";
                 productsList.filter(products => products.category === "Cookies").forEach((element) => {
                     categoryCookies.appendChild(
-                        newProduct(element.name, element.imageUrl, element.price, element.id));
+                        newProduct(element.name, element.imageUrl, element.category, element.price, element.id));
                 });
         }
     } catch (error) {
@@ -52,11 +53,3 @@ const render = async () => {
 };
 
 render();
-
-// ESCUCHAR VER TODO
-/*
-const viewAll = document.querySelector("[data-view]");
-
-viewAll.addEventListener("click", () => {
-    window.location.href = "../screens/product-category.html";
-});*/

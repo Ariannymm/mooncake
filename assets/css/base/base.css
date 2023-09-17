@@ -7,6 +7,14 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 64px;
+}
+
 .container {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -31,6 +39,7 @@ body {
 }
 
 .card {
+    margin-top: 3rem;
     width: 100%;
     max-width: 26rem;
     box-sizing: border-box;
@@ -51,6 +60,11 @@ body {
     .title {
         font-size: 2rem;
     }
+
+    .card {
+        margin-top: 4rem;
+        margin-bottom: 0;    
+    }
 }
 
 @media (min-width: 1124px) {
@@ -64,7 +78,7 @@ body {
     }
 
     .card {
-        margin-top: 4rem;
-        margin-bottom: 4rem;    
+        margin-top: 5rem;
+        margin-bottom: 0;    
     }
 }

@@ -31,9 +31,9 @@
 }
 
 .product__category {
-    color: var(--second-dark-color);
+    color: var(--body-text-color);
     font-family: var(--news-cycle);
-    font-size: .875rem;
+    font-size: 1rem;
 }
 
 @media (min-width: 500px) {

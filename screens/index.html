@@ -20,10 +20,10 @@
         <header class="header flex container">
             <img class="header__logo" src="../assets/img/logo_mooncake.png" alt="logo">
             <nav class="flex">
-                <div class="flex">
+                <div class="flex" id="searchContainer">
                     <form class="search__bar flex" id="searchForm">
                         <input class="search__input" type="text" placeholder="Buscar" id="searchInput" hidden>
-                        <button type="submit" class="search__button" id="searchBtn"><ion-icon name="search"></ion-icon></button>
+                        <button type="submit" class="search__button"><ion-icon name="search"></ion-icon></button>
                     </form>
                 </div>
                 <a type="button" href="./login.html" class="btn__header">
@@ -33,45 +33,46 @@
             </nav>
         </header>
         <main>
-            <section class="banner">
-                <div class="banner__image"></div>
-                <div class="banner__box container flex flex--column">
-                    <h1 class="banner__title">Promociones del Mes</h1>
-                    <h2 class="banner__subtitle">Productos seleccionados con 30% de descuento</h2>
-                    <a href="#" class="banner_btn primary_button--alt button">Ver más</a>    
-                </div>
-            </section>
-
-            <section class="products__section container">
-                <div class="categories__info flex">
-                    <h1 class="category__type title">Cheescakes</h1>
-                    <a href="./product-category.html?category=Cheesecakes" class="categories__link" data-category="cheescakes">
-                        <span>Ver Todo </span>
-                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
-                    </a>
-                </div>
-                <section class="categories" data-cheesecakes>
+            <section>
+                <section class="banner" id="banner">
+                    <div class="banner__box container flex flex--column">
+                        <h1 class="banner__title">Promociones del Mes</h1>
+                        <h2 class="banner__subtitle">Productos seleccionados con 30% de descuento</h2>
+                        <a href="#" class="banner_btn primary_button--alt button">Ver más</a>    
+                    </div>
                 </section>
                 
-                <div class="categories__info flex">
-                    <h1 class="category__type title">Cupcakes</h1>
-                    <a href="./product-category.html?category=Cupcakes" class="categories__link" data-category="cupcakes">
-                        <span>Ver Todo </span>
-                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
-                    </a>
-                </div>
-                <section class="categories" data-cupcakes>
-                </section>
-
-                <div class="categories__info flex">
-                    <h1 class="category__type title">Cookies</h1>
-                    <a href="./product-category.html?category=Cookies" class="categories__link" data-category="cookies">
-                        <span>Ver Todo </span>
-                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
-                    </a>
-                </div>
-                <section class="categories" data-cookies>
-                </section>
+                <section class="products__section container" data-container>
+                    <div class="categories__info flex">
+                        <h1 class="category__type title">Cheescakes</h1>
+                        <a href="./products.html?category=Cheesecakes" class="categories__link" data-category="cheescakes">
+                            <span>Ver Todo </span>
+                            <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </a>
+                    </div>
+                    <section class="categories" data-cheesecakes>
+                    </section>
+                    
+                    <div class="categories__info flex">
+                        <h1 class="category__type title">Cupcakes</h1>
+                        <a href="./products.html?category=Cupcakes" class="categories__link" data-category="cupcakes">
+                            <span>Ver Todo </span>
+                            <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </a>
+                    </div>
+                    <section class="categories" data-cupcakes>
+                    </section>
+    
+                    <div class="categories__info flex">
+                        <h1 class="category__type title">Cookies</h1>
+                        <a href="./products.html?category=Cookies" class="categories__link" data-category="cookies">
+                            <span>Ver Todo </span>
+                            <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        </a>
+                    </div>
+                    <section class="categories" data-cookies>
+                    </section>
+                </section>    
             </section>
 
             <section class="contact container flex flex--center">
@@ -120,6 +121,7 @@
             <p>&copy; Desarrollado por Arianny Mendoza   2023</p>
         </footer>
         <script type="module" src="../controllers/products-controller.js"></script>
+        <script type="module" src="../controllers/search-products-controller.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>

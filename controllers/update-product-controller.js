@@ -27,6 +27,6 @@ editForm.addEventListener("submit", (event) => {
       inputPrice.value,
       inputDescription.value,
   ).then(() => {
-      window.location.href = "../screens/all-products-client.html";
+      window.location.href = "../screens/products-list-edit.html";
   });
 });

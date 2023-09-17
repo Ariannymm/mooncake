@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mooncake | Todos los Productos</title>
+        <title>Mooncake</title>
         <link rel="icon" href="../assets/icon/icon_mooncake.png" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,8 @@
             rel="stylesheet"
         >
         <link rel="stylesheet" href="../assets/css/base/base.css">
+        <link rel="stylesheet" href="../assets/css/index.css">
         <link rel="stylesheet" href="../assets/css/all-products.css">
-        <link rel="stylesheet" href="../assets/css/componentes/header.css">
         <link rel="stylesheet" href="../assets/css/componentes/product-card.css">
         <link rel="stylesheet" href="../assets/css/contact.css">
     </head>
@@ -21,21 +21,29 @@
         <header class="header flex container">
             <img class="header__logo" src="../assets/img/logo_mooncake.png" alt="logo">
             <nav class="flex">
-                <div class="flex">
-                    <form class="search__bar flex" action="">
-                        <input class="search__input" type="text" placeholder="Buscar" hidden>
-                        <button class="search__button" href="#"><ion-icon name="search"></ion-icon></button>
+                <div class="flex" id="searchContainer">
+                    <form class="search__bar flex" id="searchForm">
+                        <input class="search__input" type="text" placeholder="Buscar" id="searchInput" hidden>
+                        <button type="submit" class="search__button"><ion-icon name="search"></ion-icon></button>
                     </form>
                 </div>
+                <a type="button" href="./login.html" class="btn__header">
+                    <span class="btn__header--text">Iniciar Sesión</span>
+                    <span class="btn__header--icon"><ion-icon name="person"></ion-icon></span>
+                </a>    
             </nav>
         </header>
         <main>
-            <section class="all_products container">
-                <div class="all_products--div flex">
-                    <h1 class="title" data-title></h1>
-                </div>                
-                <div class="all_products--container flex" data-category>
-                </div>
+            <section class="products__section">
+                <section>
+                    <section class="container" data-container>
+                        <section class="products__container" data-products></section>   
+                    </section>
+                </section>
+
+                <section class="padding--section container" >
+                    <section class="products__container" data-productsEdit>
+                </section>
             </section>
 
             <section class="contact container flex flex--center">
@@ -81,9 +89,10 @@
             </section>
         </main>
         <footer class="footer container flex flex--center">
-            <p>Desarrollado por Arianny Mendoza   2023</p>
+            <p>&copy; Desarrollado por Arianny Mendoza   2023</p>
         </footer>
-        <script type="module" src="../controllers/product-category-controller.js"></script>
+        <script type="module" src="../controllers/products-list.js"></script>
+        <script type="module" src="../controllers/search-products-controller.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>

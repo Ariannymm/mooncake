@@ -28,6 +28,7 @@ productServices.listaProduct(id).then((products) => {
     const content = `
       <div class="product__card">
         <img class="product__image" src="${product.imageUrl}" alt="image">
+        <h3 class="product__name">${product.category}</h3>
         <h3 class="product__name">${product.name}</h3>
         <p class="product__price">${formatPrice(product.price)}</p>
         <a href="../screens/view-product.html/${product.id}" class="product__link">Ver producto</a>

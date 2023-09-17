@@ -6,6 +6,11 @@
     padding-bottom: 1.25rem;
     background-color: var(--blanco);
     box-shadow: var(--shadow);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
 }
 
 .header__logo {
@@ -21,11 +26,10 @@
 }
 
 .search__bar:hover {
-    background-color: var(--third-color);
-}
+    box-shadow: 0 0 6px 2px var(--third-color);}
 
 .search__input {
-    background: none;
+    background: transparent;
     color: var(--body-text-color);
     font-family: var(--news-cycle);
     outline: none;
@@ -34,16 +38,12 @@
 }
 
 .search__button {
+    background: transparent;
     color: var(--body-text-color);
     cursor: pointer;
     width: 2.5rem;
     height: 100%;
     border-radius: 50%;
-}
-
-.search__button:hover {
-    background-color: var(--third-color);
-    cursor: pointer;
 }
 
 @media (min-width: 500px) {
