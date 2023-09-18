@@ -1,3 +1,5 @@
+// Versión mejorada:
+
 const form = document.querySelector("[data-form]");
 
 form.addEventListener("submit", (event) => {
@@ -6,35 +8,14 @@ form.addEventListener("submit", (event) => {
     const email = document.querySelector("[data-email]").value;
     const password = document.querySelector("[data-password]").value;
 
-    if (email.length > 5 && password.length > 5) {
+    // Verificar si el email y la contraseña cumplen con los requisitos
+    if (email.length > 8 && password.length > 8) {
+        // Aquí puedes agregar la lógica para verificar el inicio de sesión en tu backend
+        // Puedes utilizar una solicitud AJAX o cualquier otro método para enviar los datos al servidor y verificar la autenticación.
+        // Por ahora, asumiremos que el inicio de sesión es exitoso.
+        // Redirigir al usuario a la página de productos después del inicio de sesión exitoso.
         window.location.href = "../screens/products-list-edit.html";
     } else {
         alert("Email o contraseña inválidos.");
     }
 });
-
-/*
-// Obtén el formulario y el botón de envío
-const submitButton = form.querySelector("button[type='submit']");
-
-// Agrega el evento de clic al botón de envío
-submitButton.addEventListener("click", async (event) => {
-  event.preventDefault(); // Evita la acción predeterminada del formulario
-
-  try {
-    await render(); // Renderiza los productos
-  } catch (error) {
-    console.log(error);
-  }
-});
-
-// También puedes agregar el evento de envío del formulario
-form.addEventListener("submit", async (event) => {
-  event.preventDefault(); // Evita la acción predeterminada del formulario
-
-  try {
-    await render(); // Renderiza los productos
-  } catch (error) {
-    console.log(error);
-  }
-});*/

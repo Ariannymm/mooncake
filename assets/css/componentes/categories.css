@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem .2rem;
     margin: 0 auto;
@@ -27,6 +26,23 @@
 .categories__link:hover {
     color: var(--second-light-color);
     transition: .3s;
+}
+
+#container-cheesecakes, 
+#container-cupcakes, 
+#container-cookies {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#container-cheesecakes div, 
+#container-cupcakes div, 
+#container-cookies div {
+    flex: 0 0 auto;
+    width: max-content;
 }
 
 @media (min-width: 500px) {

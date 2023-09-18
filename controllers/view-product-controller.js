@@ -40,5 +40,3 @@ productServices.listaProduct(id).then((products) => {
     similarProduct.appendChild(elementProduct);
   });
 });
-
-

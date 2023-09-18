@@ -1,46 +1,58 @@
 import { productServices } from "../services/products-services.js";
 import { formatPrice } from "../formatterPrices.js";
 
+// Esta función devuelve un elemento HTML que representa un producto. El elemento HTML contiene un botón de editar, un botón de eliminar y la card con información del producto.
+
 const getProducts = (name, imageUrl, category, price, id) => {
   const card = document.createElement("div");
+  card.classList.add("all_products--card");
 
-  const content = `
-    <div class="all_products--card">
-      <div class="all_products--edit flex">
-        <a href="../screens/edit-product.html?id=${id}">
-          <button class="editBtn">
-            <ion-icon name="create-outline"></ion-icon>
-          </button>
-        </a>
-        <button class="deleteBtn">
-          <img class="deleteIcon" src="../assets/icon/delete.png"></img>
-        </button>
-      </div>
-      <div class="product__card">
-        <img class="product__image" src="${imageUrl}" alt="image">
-        <p class="product__category">${category}</p>
-        <h3 class="product__name">de ${name}</h3>
-        <p class="product__price">${formatPrice(price)}</p>
-      </div>
-    </div>
+  const buttonsDiv = document.createElement("div");
+  buttonsDiv.classList.add("all_products--edit", "flex");
+
+  const editButton = document.createElement("a");
+  editButton.href = `../screens/edit-product.html?id=${id}`;
+  editButton.classList.add("editBtn");
+  editButton.innerHTML = `
+    <ion-icon name="create-outline"></ion-icon>
   `;
-  card.innerHTML = content;
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("deleteBtn");
+  deleteButton.innerHTML = `
+    <img class="deleteIcon" src="../assets/icon/delete.png" alt="delete">
+  `;
+  deleteButton.addEventListener("click", () => {
+    productServices.deleteProduct(id);
+    setTimeout(() => {
+      location.reload();
+    }, 2000);
+  });
+
+  const productCard = document.createElement("div");
+  productCard.classList.add("product__card");
+  productCard.innerHTML = `
+    <img class="product__image" src="${imageUrl}" alt="image">
+    <p class="product__category">${category}</p>
+    <h3 class="product__name">de ${name}</h3>
+    <p class="product__price">${formatPrice(price)}</p>
+  `;
+
+  buttonsDiv.appendChild(editButton);
+  buttonsDiv.appendChild(deleteButton);
+  card.appendChild(buttonsDiv);
+  card.appendChild(productCard);
   card.dataset.id = id;
 
-  const deleteButton = card.querySelector(".deleteBtn");
-  deleteButton.addEventListener("click", () => {
-
-    productServices.deleteProduct(id);
-  });
-  
   return card;
 };
 
-
+// Se selecciona el elemento contenedor en el que se mostrarán los productos.
 
 const productsContainer = document.querySelector("[data-productsEdit]");
 
-// Agregar título y enlace antes del contenedor de productos
+// Se crean un título "h1", un enlace "a" de "Agregar Producto", estos elementos se agregan a un contenedor "div" insertado antes del contenedor de productos anterior.
+
 const title = document.createElement("h1");
 title.classList.add("title", "all_products--title");
 title.textContent = "Todos los productos";
@@ -57,36 +69,7 @@ container.appendChild(link);
 
 productsContainer.insertAdjacentElement("beforebegin", container);
 
-/*
-const render = async () => {
-  try {
-    const list = await productServices.productsList();
-
-    if (list) {
-      list.filter(product => product.category === "Cheesecakes").forEach(product => {
-        productsContainer.appendChild(
-          getProducts(product.name, product.imageUrl, product.category, product.price, product.id)
-        );
-      });
-    }
-    if (list) {
-      list.filter(product => product.category === "Cupcakes").forEach(product => {
-        productsContainer.appendChild(
-          getProducts(product.name, product.imageUrl, product.category, product.price, product.id)
-        );
-      });
-    }
-    if (list) {
-      list.filter(product => product.category === "Cookies").forEach(product => {
-        productsContainer.appendChild(
-          getProducts(product.name, product.imageUrl, product.category, product.price, product.id)
-        );
-      });
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};*/
+// Esta función se encarga de obtener la lista de productos. Luego, filtra los productos por categoría y los renderiza en el contenedor de productos.
 
 const render = async () => {
   try {

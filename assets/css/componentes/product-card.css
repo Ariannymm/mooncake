@@ -13,12 +13,14 @@
 
 .product__name {
     font-size: .875rem;
+    width: max-content;
 }
 
 .product__price,
 .product__link {
     font-weight: bold;
     font-size: 0.75rem;
+    width: max-content;
 }
 
 .product__link {
