@@ -17,10 +17,10 @@ form.addEventListener("submit", (event) => {
     // Los valores se pasan a "createProduct" para crear un nuevo producto. Se encadenan las promesas y si se resuelve correctamente, se redirige a la página indicada.
     productServices
     .createProduct(name, url, category, price, description)
-    .then((respuesta) => {
+    .then(() => {
         window.location.href = "../screens/products-list-edit.html";
     })
-    .catch((error) => {
-        console.log(error);
+    .catch(() => {
+        console.error;
     });
 });

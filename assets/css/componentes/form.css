@@ -25,3 +25,24 @@
     background-color: transparent;
 }
 
+/* CSS ERROR FORM*/
+
+.input__invalido {
+    margin-bottom: 0.5rem;
+  }
+  
+  .input__invalido .form__input {
+    border: 2px solid var(--warning);
+  }
+  
+  .input__invalido::placeholder {
+    color: var(--warning);
+  }
+  
+  .input__invalido .input__error {
+    color: var(--warning);
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: .75rem;
+  }

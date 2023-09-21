@@ -74,12 +74,6 @@
     max-height: 5.625rem;
 }
 
-.input__error {
-    margin-bottom: 1rem;
-    font-size: .75rem;
-    color: var(--alert-color);
-}
-
 .contact__button {
     background-color: var(--third-dark-color);
     align-self: flex-start;

@@ -26,13 +26,15 @@
                     <form class="form flex flex--column" data-addform>
                         <div class="input__container flex flex--column">
                             <input 
+                            name=""
                             type="text" 
                             class="form__input input" 
                             placeholder="Url de imagen del producto" 
                             required
+                            pattern="[\s\S]{4,120}"
                             data-url
                             />
-                            <span class="input__error">Este campo es requerido*</span>
+                            <span class="input__error"></span>
                         </div>
                         <div class="input__container flex flex--column">
                             <input 
@@ -40,19 +42,21 @@
                             class="form__input input" 
                             placeholder="Nombre del producto" 
                             required
+                            pattern="[\s\S]{4,20}"
                             data-name
                             />
-                            <span class="input__error">Este campo es requerido*</span>
+                            <span class="input__error"></span>
                         </div>
                         <div class="input__container flex flex--column">
                             <input 
-                            type="text" 
+                            type="number" 
                             class="form__input input" 
                             placeholder="Precio del producto" 
                             required
+                            pattern="[\s\S]{4,8}"
                             data-price
                             />
-                            <span class="input__error">Este campo es requerido*</span>
+                            <span class="input__error"></span>
                         </div>
                         <div class="input__container flex flex--column">
                             <input 
@@ -60,9 +64,10 @@
                             class="form__input input" 
                             placeholder="Categoría" 
                             required
+                            pattern="[\s\S]{4,20}"
                             data-category
                             />
-                            <span class="input__error">Este campo es requerido*</span>
+                            <span class="input__error"></span>
                         </div>
                         <div class="input__container flex flex--column">
                             <textarea 
@@ -72,8 +77,9 @@
                             maxlength="300"
                             placeholder="Descripción"
                             required
+                            pattern="[\s\S]{4,120}"
                             data-description></textarea>
-                            <span class="input__error">Este campo es requerido*</span>
+                            <span class="input__error"></span>
                         </div>
                         <button type="submit" class="secondary_button button">Agregar Producto</button>
                     </form>    

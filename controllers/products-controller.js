@@ -1,5 +1,5 @@
 import { productServices } from "../services/products-services.js";
-import { formatPrice } from "../formatterPrices.js";
+import { formatPrice } from "../utils/formatterPrices.js";
 
 // Se crea una nueva card de producto con la clase "product__card" estableciendo su contenido HTML con una plantilla de cadena de texto. 
 

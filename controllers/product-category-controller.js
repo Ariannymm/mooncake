@@ -1,4 +1,5 @@
 import { productServices } from "../services/products-services.js";
+import { formatPrice } from "../utils/formatterPrices.js";
 
 // Selección de elementos del DOM
 
@@ -18,9 +19,9 @@ const categoryToMethodMap = {
   Cookies: productServices.cookiesProducts
 };
 
-// Se verifica si se proporcionó una categoría válida y si existe un método correspondiente, de ser así, se llama para obtener los productos de dicha categoría.
+// Se define la función para procesar una categoría específica y mostrar los productos correspondientes en la página.
 
-if (category && categoryToMethodMap.hasOwnProperty(category)) {
+const processCategory = (category) => {
   const productsPromise = categoryToMethodMap[category]();
 
   productsPromise.then(data => {
@@ -36,10 +37,16 @@ if (category && categoryToMethodMap.hasOwnProperty(category)) {
         <img class="product__image" src="${product.imageUrl}" alt="${product.name}">
         <h2 class="product__name">${product.category}</h2>
         <h2 class="product__name">${product.name}</h2>
-        <p class="product__price">${product.price}</p>
+        <p class="product__price">${formatPrice(product.price)}</p>
         <a href="../screens/view-product.html?id=${product.id}" class="product__link">Ver producto</a>
       `;
       productsSection.appendChild(productElement);
     });
   });
-};
+}
+
+// Se verifica si "category" existe y si "categoryToMethodMap" tiene una propiedad correspondiente. Si ambas condiciones se cumplen, se llama a la función anterior.
+
+if (category && categoryToMethodMap.hasOwnProperty(category)) {
+  processCategory(category);
+}

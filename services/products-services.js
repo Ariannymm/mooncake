@@ -3,14 +3,14 @@
 
 const productsList = () =>
     fetch("https://alurageek-api-three.vercel.app/products")
-        .then((respuesta) => respuesta.json())
+        .then((response) => response.json())
         .catch((error) => console.log(error));
 
 // Solicitud para obtener detalles de un producto, toma un parámetro id que utiliza para construir la URL.
 
 const listaProduct = (id) => {
-    return fetch(`https://alurageek-api-three.vercel.app/products/${id}`).then((respuesta) => {
-      return respuesta.json();
+    return fetch(`https://alurageek-api-three.vercel.app/products/${id}`).then((response) => {
+      return response.json();
     });
 };
 
@@ -19,19 +19,18 @@ const listaProduct = (id) => {
 
 const cheesecakesProducts = () =>
     fetch("https://alurageek-api-three.vercel.app/products?category=Cheesecakes")
-        .then( (respuesta) => respuesta.json())
+        .then( (response) => response.json())
         .catch( (error) => console.log(error));
 
 const cupcakesProducts = () =>
 fetch("https://alurageek-api-three.vercel.app/products?category=Cupcakes")
-    .then( (respuesta) => respuesta.json())
+    .then( (response) => response.json())
     .catch( (error) => console.log(error));
 
 const cookiesProducts = () =>
 fetch("https://alurageek-api-three.vercel.app/products?category=Cookies")
-    .then( (respuesta) => respuesta.json())
+    .then( (response) => response.json())
     .catch( (error) => console.log(error));
-
 
 // POST
 // Solicitud para crear un nuevo producto. Si es exitosa, se actualiza la lista de productos alojada en el almacenamiento local.
@@ -50,9 +49,9 @@ const createProduct = (name, imageUrl, category, price, description) => {
             description,
         }),
     })
-        .then((respuesta) => {
-            if (respuesta.ok) {
-                return respuesta.body;
+        .then((response) => {
+            if (response.ok) {
+                return response.body;
             }
             throw new Error("Lo sentimos, no se pudo crear el producto");
         })
@@ -64,7 +63,6 @@ const createProduct = (name, imageUrl, category, price, description) => {
         })
         .catch((error) => console.log(error));
 };
-
 
 // PUT/PATCH
 // Solicitud para actualizar un producto existente. Toma parámetros que representan los nuevos datos del producto.
@@ -81,15 +79,14 @@ const changeProduct = (id, name, category, price, description) => {
             price,
             description,
         }),
-    }).then((respuesta) => {
-        console.log(respuesta);
-        if (respuesta.ok) {
-            return respuesta.body;
+    }).then((response) => {
+        console.log(response);
+        if (response.ok) {
+            return response.body;
         }
         throw new Error("Lo sentimos, no se pudo actualizar el producto");
     }).catch((error) => console.log(error));
 };
-
 
 // DELETE
 // Solicitud para eliminar un producto existente. Toma el id para construir la URL.

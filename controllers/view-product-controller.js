@@ -1,5 +1,5 @@
 import { productServices } from "../services/products-services.js";
-import { formatPrice } from "../formatterPrices.js";
+import { formatPrice } from "../utils/formatterPrices.js";
 
 const url = new URL(window.location);
 const id = url.searchParams.get("id");

@@ -1,12 +1,17 @@
 import { productServices } from "../services/products-services.js";
-import { formatPrice } from "../formatterPrices.js";
+import { formatPrice } from "../utils/formatterPrices.js";
 
-// Esta función devuelve un elemento HTML que representa un producto. El elemento HTML contiene un botón de editar, un botón de eliminar y la card con información del producto.
+// Se crea el contenedor principal para cada producto en la lista de productos.
 
-const getProducts = (name, imageUrl, category, price, id) => {
+const createCard = () => {
   const card = document.createElement("div");
   card.classList.add("all_products--card");
+  return card;
+};
 
+// Se crea el contenedor para los botones de edición y eliminación de cada producto. Dentro de esta función, se crean y adjuntan los elementos "editBtn" y "deleteBtn".
+
+const createButtonsDiv = (id) => {
   const buttonsDiv = document.createElement("div");
   buttonsDiv.classList.add("all_products--edit", "flex");
 
@@ -29,6 +34,15 @@ const getProducts = (name, imageUrl, category, price, id) => {
     }, 2000);
   });
 
+  buttonsDiv.appendChild(editButton);
+  buttonsDiv.appendChild(deleteButton);
+
+  return buttonsDiv;
+};
+
+// Se crea el contenedor para mostrar la información del producto.
+
+const createProductCard = (imageUrl, category, name, price) => {
   const productCard = document.createElement("div");
   productCard.classList.add("product__card");
   productCard.innerHTML = `
@@ -38,14 +52,23 @@ const getProducts = (name, imageUrl, category, price, id) => {
     <p class="product__price">${formatPrice(price)}</p>
   `;
 
-  buttonsDiv.appendChild(editButton);
-  buttonsDiv.appendChild(deleteButton);
+  return productCard;
+};
+
+// Función principal que utiliza las funciones anteriores para crear y retornar el elemento completo que representa el producto a modificar.
+
+const getProducts = (name, imageUrl, category, price, id) => {
+  const card = createCard();
+  const buttonsDiv = createButtonsDiv(id);
+  const productCard = createProductCard(imageUrl, category, name, price);
+
   card.appendChild(buttonsDiv);
   card.appendChild(productCard);
   card.dataset.id = id;
 
   return card;
 };
+
 
 // Se selecciona el elemento contenedor en el que se mostrarán los productos.
 
